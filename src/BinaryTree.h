@@ -15,16 +15,18 @@ private:
 public:
 	binaryTree()
 	{
-
+		pParent = NULL;
+		pLeft = NULL;
+		pRight = NULL;
 
 	}
 
 	binaryTree(T newItem)
 	{
 		data = newItem;
-		pParent = nullptr;
-		pLeft = nullptr;
-		pRight = nullptr;
+		pParent = NULL;
+		pLeft = NULL;
+		pRight = NULL;
 	}
 
 
