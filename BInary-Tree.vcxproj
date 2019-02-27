@@ -98,6 +98,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\huffman.h" />
+    <ClInclude Include="src\node.h" />
+    <ClInclude Include="src\pair.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\assignment08.cpp" />
+    <ClCompile Include="src\huffman.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
