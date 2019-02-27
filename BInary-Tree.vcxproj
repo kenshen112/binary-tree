@@ -98,6 +98,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\BinaryTree.h" />
     <ClInclude Include="src\huffman.h" />
     <ClInclude Include="src\node.h" />
     <ClInclude Include="src\pair.h" />
