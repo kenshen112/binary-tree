@@ -3,7 +3,7 @@
 
 
 template <class T>
-class binaryTree
+class BNode
 {
 
 private:
@@ -13,7 +13,7 @@ private:
 	Node <T> pRight;
 
 public:
-	binaryTree()
+	BNode()
 	{
 		pParent = NULL;
 		pLeft = NULL;
@@ -21,7 +21,7 @@ public:
 
 	}
 
-	binaryTree(T newItem)
+	BNode(T newItem)
 	{
 		data = newItem;
 		pParent = NULL;
@@ -30,8 +30,8 @@ public:
 	}
 
 
-		binaryTree operator>>(const Node <T> display);
-        binaryTree <T> copyBTree(binaryTree <T> source);
+		BNode operator>>(const Node <T> display);
+        BNode <T> copyBTree(binaryTree <T> source);
         void deleteBTree(binaryTree <T> node);
 };
 
@@ -40,7 +40,7 @@ public:
  *Copies one binary Tree into another
 *****************************************/
 template <class T>
-binaryTree <T>::binaryTree <T> copyBTree(binaryTree <T> source)
+BNode <T>::BNode <T> copyBTree(binaryTree <T> source)
 {//^There is an error with this, gonna work more on it tomorrow, Jess 02/27
    if(source == NULL)
    {
@@ -89,7 +89,7 @@ void deleteBTree(binaryTree <T> node)
 * INPUT OPERATOR
 *******************/
 template <class T>
-binaryTree <T>::binaryTree<T> operator>>(const Node <T> display)
+BNode <T>::BNode<T> operator>>(const Node <T> display)
 {
 
 }
