@@ -32,7 +32,7 @@ public:
 
 };
 
-copyBTree(binaryTree source)
+binaryTree copyBTree(binaryTree source)
 {
    if(source == NULL)
    {
