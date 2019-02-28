@@ -31,3 +31,30 @@ public:
 
 
 };
+
+copyBTree(binaryTree source)
+{
+   if(source == NULL)
+   {
+      return;
+   }
+
+   binaryTree destination = new binaryTree(source.data);
+
+   
+   destination.pLeft = copyBTree(source.pLeft);
+   if(destination.pLeft != NULL)
+   {
+      destination.pLeft.pParent = destination;
+   }
+
+   destination.pRight = copyBTree(source.pRight);
+
+   if(destination.pRight != NULL)
+   {
+      destination.pRight.pParent = destination;
+   }
+
+   return destination;
+
+}
