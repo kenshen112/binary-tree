@@ -29,15 +29,17 @@ public:
 		pRight = NULL;
 	}
 
-
+        binaryTree <T> copyBTree(binaryTree <T> source);
+        void deleteBTree(binaryTree <T> node);
 };
 
 /******************************************
  * COPY
  *Copies one binary Tree into another
 *****************************************/
-binaryTree <T> copyBTree(binaryTree <T> source)
-{
+template <class T>
+binaryTree <T>::binaryTree <T> copyBTree(binaryTree <T> source)
+{//^There is an error with this, gonna work more on it tomorrow, Jess 02/27
    if(source == NULL)
    {
       return;
@@ -66,6 +68,7 @@ binaryTree <T> copyBTree(binaryTree <T> source)
  *DELETE
  * deletes each node of the binary tree
 ********************************************/
+template <class T>
 void deleteBTree(binaryTree <T> node)
 {
    if(node == NULL)
