@@ -32,7 +32,11 @@ public:
 
 };
 
-binaryTree copyBTree(binaryTree source)
+/******************************************
+ * COPY
+ *Copies one binary Tree into another
+*****************************************/
+binaryTree <T> copyBTree(binaryTree <T> source)
 {
    if(source == NULL)
    {
@@ -57,4 +61,20 @@ binaryTree copyBTree(binaryTree source)
 
    return destination;
 
+}
+/*********************************************
+ *DELETE
+ * deletes each node of the binary tree
+********************************************/
+void deleteBTree(binaryTree <T> node)
+{
+   if(node == NULL)
+   {
+      return;
+   }
+
+   deleteBTree(node.pLeft); 
+   deleteBTree(node.pRight);
+
+   delete node;
 }
