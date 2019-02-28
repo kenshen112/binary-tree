@@ -29,6 +29,8 @@ public:
 		pRight = NULL;
 	}
 
+
+		binaryTree operator>>(const Node <T> display);
         binaryTree <T> copyBTree(binaryTree <T> source);
         void deleteBTree(binaryTree <T> node);
 };
@@ -80,4 +82,14 @@ void deleteBTree(binaryTree <T> node)
    deleteBTree(node.pRight);
 
    delete node;
+}
+
+
+/********************
+* INPUT OPERATOR
+*******************/
+template <class T>
+binaryTree <T>::binaryTree<T> operator>>(const Node <T> display)
+{
+
 }

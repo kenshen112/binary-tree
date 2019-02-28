@@ -18,13 +18,13 @@
     <ClInclude Include="src\node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\huffman.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\pair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\BinaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bnode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
