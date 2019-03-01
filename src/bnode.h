@@ -11,41 +11,35 @@ private:
 	
 
 public:
-T data;
-	Node <T> *pParent;
-	Node <T> *pLeft;
-	Node <T> *pRight;
-
-
-	BNode()
-	{
-		pParent = nullptr;
-		pLeft = nullptr;
-		pRight = nullptr;
-
-	}
-
-	BNode(T newItem)
-	{
-		data = newItem;
-		pParent = nullptr;
-		pLeft = nullptr;
-		pRight = nullptr;
-	}
-
-		int sizeBtree(BNode <T> *pNode);
-
-		BNode operator>>(const Node <T> display);       
-		BNode <T> copyBTree(BNode <T> *source);
-        	  
-		void addLeft(BNode <T> *pNode, const T & t);
-		void addLeft(BNode <T> *pNode, BNode <T> *pChild);
-
-		void addRight(BNode <T> *pNode, const T & t);
-		void addRight(BNode <T> *pNode, BNode <T> *pChild);
-		
-		void displayLVR(const Node <T> * pHead);
-		void deleteBTree(BNode <T> *node);
+   T data;
+   Node <T> *pParent;
+   Node <T> *pLeft;
+   Node <T> *pRight;
+   
+   
+   BNode()
+   {
+      pParent = nullptr;
+      pLeft = nullptr;
+      pRight = nullptr;
+      
+   }
+   
+   BNode(T newItem)
+   {
+      data = newItem;
+      pParent = nullptr;
+      pLeft = nullptr;
+      pRight = nullptr;
+   }
+   
+   //int sizeBtree(BNode <T> *pNode);
+   
+   BNode operator>>(const BNode <T> display);       
+   BNode <T> copyBTree(BNode <T> *source);
+   
+   void displayLVR(const BNode <T> * pHead);
+   void deleteBTree(BNode <T> *bnode);
 };
 
 /******************************************
@@ -85,22 +79,22 @@ BNode<T> BNode<T>::copyBTree(BNode<T> *source)
  * deletes each node of the binary tree
 ********************************************/
 template <class T>
-void BNode<T>::deleteBTree(BNode<T> *node)
+void BNode<T>::deleteBTree(BNode<T> *bnode)
 {
-	if(node == nullptr)
+	if(bnode == nullptr)
    {
       return;
    }
 
-   deleteBTree(node.pLeft); 
-   deleteBTree(node.pRight);
+   deleteBTree(bnode.pLeft); 
+   deleteBTree(bnode.pRight);
 
-   delete node;
+   delete bnode;
 }
 
 
 template <class T> 
-void BNode<T>::displayLVR(const Node <T> * pHead) 
+void BNode<T>::displayLVR(const BNode <T> * pHead) 
 {
 	if (pHead == nullptr)
 	{
@@ -116,7 +110,7 @@ void BNode<T>::displayLVR(const Node <T> * pHead)
 * INPUT OPERATOR
 *******************/
 template<class T>
-BNode<T> BNode<T>::operator>>(const Node<T> display)
+BNode<T> BNode<T>::operator>>(const BNode<T> display)
 {
 	displayLVR(display);
 }
@@ -135,9 +129,9 @@ BNode<T> BNode<T>::operator>>(const Node<T> display)
  * This adsds a left hand child with the passed template data
  ********************************************************************/
 template <class T>
-void BNode<T>::addLeft(BNode <T> *pNode, const T & t)
+void addLeft(BNode <T> *pNode, const T & t)
 {
-   BNode <T> *itemNode = new Node<T>(t); //making a new node
+   BNode <T> *itemNode = new BNode<T>(t); //making a new node
    
    //and now we just set the pointers
    pNode->pLeft = itemNode; //the referenced one points forward to the new one.
@@ -151,7 +145,7 @@ void BNode<T>::addLeft(BNode <T> *pNode, const T & t)
  * This adsds a Left hand child with the passed Node pointer
  ********************************************************************/
 template <class T>
-void BNode<T>::addLeft(BNode <T> *pNode, BNode <T> *pChild) 
+void addLeft(BNode <T> *pNode, BNode <T> *pChild) 
 {
 	//and now we just set the pointers
 	pNode->pLeft = pChild; //the referenced one points forward to the new one.
@@ -166,9 +160,9 @@ void BNode<T>::addLeft(BNode <T> *pNode, BNode <T> *pChild)
  * This adsds a right hand child with the passed template data
  ********************************************************************/
 template <class T>
-void BNode<T>::addRight(BNode <T> *pNode, const T & t)
+void addRight(BNode <T> *pNode, const T & t)
 {
-   BNode <T> *itemNode = new Node<T>(t); //making a new node
+   BNode <T> *itemNode = new BNode<T>(t); //making a new node
    
    //and now we just set the pointers
    pNode->pRight = itemNode; //the referenced one points forward to the new one.
@@ -182,7 +176,7 @@ void BNode<T>::addRight(BNode <T> *pNode, const T & t)
  * This adsds a right hand child with the passed Node pointer
  ********************************************************************/
 template <class T>
-void BNode<T>::addRight (BNode <T> *pNode, BNode <T> *pChild)
+void addRight (BNode <T> *pNode, BNode <T> *pChild)
 {
    //and now we just set the pointers
    pNode->pRight = pChild; //the referenced one points forward to the new one.
@@ -196,7 +190,7 @@ void BNode<T>::addRight (BNode <T> *pNode, BNode <T> *pChild)
  * returns an int of how many nodes there are in the tree
  *****************************************************/
 template <class T>
-int BNode<T>::sizeBtree(BNode <T> *pNode)
+int sizeBtree(BNode <T> *pNode)
 {
    if(pNode == nullptr)
       return 0;
