@@ -176,7 +176,7 @@ void addRight(BNode <T> *pNode, const T & t)
  * This adsds a right hand child with the passed Node pointer
  ********************************************************************/
 template <class T>
-void addRight (BNode <T> *pNode, BNode <T> *pChild)
+void addRight(BNode <T> *pNode, BNode <T> *pChild)
 {
    //and now we just set the pointers
    pNode->pRight = pChild; //the referenced one points forward to the new one.
