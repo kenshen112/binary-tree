@@ -12,9 +12,9 @@ private:
 
 public:
    T data;
-   Node <T> *pParent;
-   Node <T> *pLeft;
-   Node <T> *pRight;
+   BNode <T> *pParent;
+   BNode <T> *pLeft;
+   BNode <T> *pRight;
    
    
    BNode()
