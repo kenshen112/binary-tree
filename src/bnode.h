@@ -190,7 +190,7 @@ void addRight(BNode <T> *pNode, BNode <T> *pChild)
  * returns an int of how many nodes there are in the tree
  *****************************************************/
 template <class T>
-int sizeBtree(BNode <T> *pNode)
+int sizeBTree(BNode <T> *pNode)
 {
    if(pNode == nullptr)
       return 0;
