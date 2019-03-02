@@ -96,7 +96,7 @@ void displayLVR(const BNode <T> * pHead)
    }
    
    displayLVR(pHead->pLeft);      // L    
-   std::cout << pHead->data;      // V    
+   std::cout << pHead->data << ' ';      // V    
    displayLVR(pHead->pRight);     // R 
 }
 
@@ -106,7 +106,7 @@ void displayLVR(const BNode <T> * pHead)
 template<class T>
 BNode <T> BNode <T> ::operator << (const BNode<T> *display)
 {
-   displayLVR(display);
+   displayLVR(*display);
 }
 
 
