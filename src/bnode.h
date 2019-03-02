@@ -33,7 +33,7 @@ public:
       pRight = nullptr;
    }
 
-//   BNode operator << (const BNode <T> *thing);          
+//friend std::ostream& operator<<(std::ostream & out, const BNode <T> *rhs);
 };
 
 /******************************************

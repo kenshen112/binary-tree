@@ -3,3 +3,8 @@
 ################################################################################
 
 /Debug/BInary-Tree.tlog/unsuccessfulbuild
+*.opendb
+*.lastbuildstate
+*.tlog
+*.log
+*.pdb
