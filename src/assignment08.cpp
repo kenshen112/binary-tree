@@ -14,7 +14,7 @@
 #include <string>      // for STRING
 #include <cassert>     // for ASSERT
 #include "bnode.h"     // your BinaryNode class should be in bnode.h
-#include "huffman.h"   // for huffman()
+//#include "huffman.h"   // for huffman()
 using namespace std;
 
 
@@ -65,7 +65,7 @@ int main()
 
          while (fileName != "quit")
          {
-            huffman(fileName);
+            //      huffman(fileName);
             cout << "> ";
             cin  >> fileName;
          }
