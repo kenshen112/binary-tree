@@ -34,6 +34,7 @@ public:
    }
 
 //friend std::ostream& operator<<(std::ostream & out, const BNode <T> *rhs);
+//   BNode operator << (const BNode <T> *thing);          
 };
 
 /******************************************
