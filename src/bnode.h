@@ -33,7 +33,7 @@ public:
       pRight = nullptr;
    }
 
-//   BNode operator << (const BNode <T> *thing);          
+friend std::ostream& operator<<(std::ostream & out, const BNode <T> *rhs);
 };
 
 /******************************************
@@ -104,7 +104,7 @@ void displayLVR(const BNode <T> * pHead)
 * INPUT OPERATOR
 *******************/
 template <class T>
-inline std::ostream & operator << (std::ostream & out, const BNode <T> & rhs)
+std::ostream & operator<<(std::ostream & out, const BNode<T>* rhs)
 {
    out << "we made it in\n";
    

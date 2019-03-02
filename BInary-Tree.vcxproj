@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\assignment08.cpp" />
+    <ClCompile Include="src\bnode.cpp" />
     <ClCompile Include="src\huffman.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
