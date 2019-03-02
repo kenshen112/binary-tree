@@ -107,6 +107,7 @@ template<class T>
 BNode <T> BNode <T> ::operator << (const BNode<T> *display)
 {
    displayLVR(*display);
+   return *this;
 }
 
 
