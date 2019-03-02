@@ -32,9 +32,7 @@ public:
       pLeft = nullptr;
       pRight = nullptr;
    }
-   
-   //int sizeBtree(BNode <T> *pNode);
-   
+      
    BNode operator>>(const BNode <T> display);          
 };
 
@@ -43,7 +41,7 @@ public:
  *Copies one binary Tree into another
 *****************************************/
 template<class T>
-BNode<T> copyBTree(BNode<T> *source)
+BNode <T> * copyBTree(BNode<T> *source)
 {
    if(source == nullptr)
    {
@@ -92,14 +90,14 @@ void deleteBTree(BNode<T> *bnode)
 template <class T> 
 void displayLVR(const BNode <T> * pHead) 
 {
-	if (pHead == nullptr)
-	{
-		return;
-	}
-
-	displayLVR(pHead->pLeft);      // L    
-	std::cout << pHead->data;      // V    
-	displayLVR(pHead->pRight);     // R 
+   if (pHead == nullptr)
+   {
+      return;
+   }
+   
+   displayLVR(pHead->pLeft);      // L    
+   std::cout << pHead->data;      // V    
+   displayLVR(pHead->pRight);     // R 
 }
 
 /********************
@@ -108,7 +106,7 @@ void displayLVR(const BNode <T> * pHead)
 template<class T>
 BNode<T> BNode<T>::operator>>(const BNode<T> display)
 {
-	displayLVR(display);
+   displayLVR(display);
 }
 
 
@@ -143,11 +141,11 @@ void addLeft(BNode <T> *pNode, const T & t)
 template <class T>
 void addLeft(BNode <T> *pNode, BNode <T> *pChild) 
 {
-	//and now we just set the pointers
-	pNode->pLeft = pChild; //the referenced one points forward to the new one.
-
-	//the new one needs to point to the passed one
-	pChild->pParent = pNode; //the new one points backward to the referenced one
+   //and now we just set the pointers
+   pNode->pLeft = pChild; //the referenced one points forward to the new one.
+   
+   //the new one needs to point to the passed one
+   pChild->pParent = pNode; //the new one points backward to the referenced one
 }
 
 
@@ -191,6 +189,6 @@ int sizeBTree(BNode <T> *pNode)
    if(pNode == nullptr)
       return 0;
    else
-      return (sizeBtree(pNode->pLeft) + 1 + sizeBtree(pNode->pRight));
+      return (sizeBTree(pNode->pLeft) + 1 + sizeBTree(pNode->pRight));
 }
 
