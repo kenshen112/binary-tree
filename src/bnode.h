@@ -75,7 +75,7 @@ BNode <T> * copyBTree(BNode<T> *source)
 template <class T>
 void deleteBTree(BNode<T> *bnode)
 {
-	if(bnode == nullptr)
+   if(bnode == nullptr)
    {
       return;
    }
@@ -141,6 +141,11 @@ void addLeft(BNode <T> *pNode, const T & t)
 template <class T>
 void addLeft(BNode <T> *pNode, BNode <T> *pChild) 
 {
+   if (pChild == nullptr)
+   {
+      pNode->pLeft = nullptr;
+      return;
+   }
    //and now we just set the pointers
    pNode->pLeft = pChild; //the referenced one points forward to the new one.
    
@@ -172,6 +177,11 @@ void addRight(BNode <T> *pNode, const T & t)
 template <class T>
 void addRight(BNode <T> *pNode, BNode <T> *pChild)
 {
+   if(pChild == nullptr)
+   {
+      pNode->pLeft = nullptr;
+      return;
+   }
    //and now we just set the pointers
    pNode->pRight = pChild; //the referenced one points forward to the new one.
    
