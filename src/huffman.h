@@ -14,4 +14,4 @@
 #include <string>
 void huffman(const std::string & fileName);
 
-#endif // HUFFMAN_h
+#endif // HUFFMAN_H
