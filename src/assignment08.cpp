@@ -274,14 +274,14 @@ void testMerge()
       BNode <char> * pMiddle = new BNode <char> ('m');
       addLeft (pMiddle, 'l');
       addRight(pMiddle, 'n');
-      cout << "Middle tree: { " << pMiddle            << "}"
+      cout << "Middle tree: { " << *pMiddle            << "}"
            << " size = "        << sizeBTree(pMiddle) << endl;
 
       // create lower tree
       BNode <char> * pLower  = new BNode <char> ('b');
       addLeft  (pLower, 'a');
       addRight (pLower, 'c');
-      cout << "Lower tree: { " << pLower            << "}"
+      cout << "Lower tree: { " << *pLower            << "}"
            << " size = "       << sizeBTree(pLower) << endl;
       
 
@@ -289,14 +289,14 @@ void testMerge()
       BNode <char> * pUpper  = new BNode <char> ('y');
       addLeft  (pUpper, 'x');
       addRight (pUpper, 'z');
-      cout << "Upper tree: { " << pUpper            << "}"
+      cout << "Upper tree: { " << *pUpper            << "}"
            << " size = "       << sizeBTree(pUpper) << endl;
       
    
       // add Lower to the left of Middle, and Upper to the right of Middle
       addLeft(pMiddle->pLeft, pLower);
       addRight(pMiddle->pRight, pUpper);
-      cout << "Merged tree: { " << pMiddle            << "}"
+      cout << "Merged tree: { " << *pMiddle            << "}"
            << " size = "        << sizeBTree(pMiddle) << endl;
 
       // copy the tree
@@ -307,7 +307,7 @@ void testMerge()
       assert(pMiddle == NULL);
 
       // display the copied tree
-      cout << "Copied tree: { " << pCopy            << "}"
+      cout << "Copied tree: { " << *pCopy            << "}"
            << " size = "        << sizeBTree(pCopy) << endl;
       deleteBTree(pCopy);
       assert(pCopy == NULL);

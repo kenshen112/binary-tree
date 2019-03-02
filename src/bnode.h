@@ -42,7 +42,7 @@ public:
  *Copies one binary Tree into another
 *****************************************/
 template<class T>
-BNode <T> * copyBTree(BNode<T> *source)
+BNode <T> * copyBTree(const BNode<T> *source)
 {
    if(source == nullptr)
    {
@@ -76,6 +76,7 @@ BNode <T> * copyBTree(BNode<T> *source)
 template <class T>
 void deleteBTree(BNode<T> *bnode)
 {
+   std::cerr << "how recursive are we?\n";
    if(bnode == nullptr)
    {
       return;
@@ -84,6 +85,7 @@ void deleteBTree(BNode<T> *bnode)
    deleteBTree(bnode->pLeft); 
    deleteBTree(bnode->pRight);
 
+   bnode = nullptr;
    delete bnode;
 }
 
