@@ -35,11 +35,7 @@ public:
    
    //int sizeBtree(BNode <T> *pNode);
    
-   BNode operator>>(const BNode <T> display);       
-   BNode <T> copyBTree(BNode <T> *source);
-   
-   void displayLVR(const BNode <T> * pHead);
-   void deleteBTree(BNode <T> *bnode);
+   BNode operator>>(const BNode <T> display);          
 };
 
 /******************************************
@@ -47,27 +43,27 @@ public:
  *Copies one binary Tree into another
 *****************************************/
 template<class T>
-BNode<T> BNode<T>::copyBTree(BNode<T> *source)
+BNode<T> copyBTree(BNode<T> *source)
 {
    if(source == nullptr)
    {
       return nullptr;
    }
 
-   BNode *destination = new BNode(source.data);
+   BNode<T> *destination = new BNode<T>(source->data);
 
    
-   destination.pLeft = copyBTree(source.pLeft);
-   if(destination.pLeft != nullptr)
+   destination->pLeft = copyBTree(source->pLeft);
+   if(destination->pLeft != nullptr)
    {
-      destination.pLeft.pParent = destination;
+      destination->pLeft->pParent = destination;
    }
 
-   destination.pRight = copyBTree(source.pRight);
+   destination->pRight = copyBTree(source->pRight);
 
-   if(destination.pRight != nullptr)
+   if(destination->pRight != nullptr)
    {
-      destination.pRight.pParent = destination;
+      destination->pRight->pParent = destination;
    }
 
    return destination;
@@ -79,22 +75,22 @@ BNode<T> BNode<T>::copyBTree(BNode<T> *source)
  * deletes each node of the binary tree
 ********************************************/
 template <class T>
-void BNode<T>::deleteBTree(BNode<T> *bnode)
+void deleteBTree(BNode<T> *bnode)
 {
 	if(bnode == nullptr)
    {
       return;
    }
 
-   deleteBTree(bnode.pLeft); 
-   deleteBTree(bnode.pRight);
+   deleteBTree(bnode->pLeft); 
+   deleteBTree(bnode->pRight);
 
    delete bnode;
 }
 
 
 template <class T> 
-void BNode<T>::displayLVR(const BNode <T> * pHead) 
+void displayLVR(const BNode <T> * pHead) 
 {
 	if (pHead == nullptr)
 	{
@@ -195,6 +191,6 @@ int sizeBTree(BNode <T> *pNode)
    if(pNode == nullptr)
       return 0;
    else
-      return (sizeBtree(pNode.pLeft) + 1 + sizeBtree(pNode.pRight));
+      return (sizeBtree(pNode->pLeft) + 1 + sizeBtree(pNode->pRight));
 }
 
