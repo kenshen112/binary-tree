@@ -33,7 +33,7 @@ public:
       pRight = nullptr;
    }
 
-   BNode operator << (const BNode <T> *thing);          
+//   BNode operator << (const BNode <T> *thing);          
 };
 
 /******************************************
@@ -86,7 +86,7 @@ void deleteBTree(BNode<T> *bnode)
    delete bnode;
 }
 
-
+/*
 template <class T> 
 void displayLVR(const BNode <T> * pHead) 
 {
@@ -98,18 +98,29 @@ void displayLVR(const BNode <T> * pHead)
    displayLVR(pHead->pLeft);      // L    
    std::cout << pHead->data << ' ';      // V    
    displayLVR(pHead->pRight);     // R 
-}
+}*/
 
 /********************
 * INPUT OPERATOR
 *******************/
+template <class T>
+inline std::ostream & operator << (std::ostream & out, const BNode <T> & rhs)
+{
+   out << "we made it in\n";
+   
+   out << rhs->pLeft;
+   out << rhs->data;
+   out << rhs->pRight;
+   return out;
+}
+/*
 template<class T>
-BNode <T> BNode <T> ::operator << (const BNode<T> * thing)
+BNode <T> :: operator << (const BNode<T> * thing)
 {
    std::cout << "did we even get to this point\n";
    displayLVR(thing);
    return *this;
-}
+   }*/
 
 
 
