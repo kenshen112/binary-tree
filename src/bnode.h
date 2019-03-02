@@ -96,7 +96,7 @@ void displayLVR(const BNode <T> * pHead)
    }
    
    displayLVR(pHead->pLeft);      // L    
-   std::cout << pHead->data;      // V    
+   std::cout << *pHead->data;      // V    
    displayLVR(pHead->pRight);     // R 
 }
 
