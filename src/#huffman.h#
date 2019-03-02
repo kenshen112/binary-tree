@@ -1,0 +1,34 @@
+/***********************************************************************
+ * Module:
+ *    Week 08, Huffman
+ *    Brother Helfrich, CS 235
+ * Author:
+ *    Br. Helfrich
+ * Summary:
+ *    This program will implement the huffman() function
+ ************************************************************************/
+
+#ifndef HUFFMAN_H
+#define HUFFMAN_H
+
+#include <string>
+void huffman(const std::string & fileName);
+
+Template (T)
+class huff_code
+{
+  public:
+   //constructors
+   huff_code();
+   huff_code();
+   
+   BNode <T> * pNode;
+
+   
+   
+   
+   
+   
+};
+
+#endif // HUFFMAN_H

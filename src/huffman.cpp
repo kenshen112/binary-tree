@@ -25,11 +25,26 @@ using std::string;
 using std::bad_alloc;
 using namespace custom;
 
+void readFile(const string & filename, vector <T> & tree1, vector <T> & tree2);
+
 /*******************************************
  * HUFFMAN
  * Driver program to exercise the huffman generation code
  *******************************************/
 void huffman(const string & fileName)
 {
+   //two vectors, of BNodes holding pairs
+   vector <BNode <pair> *> huff_tree;
+   vector <BNode <pair> *> hold_order;
+
+   //read the file
+   readFile(fileName, huff_tree, hold_order);
+
+   
    return;
+}
+
+void readFile(const string & filename, vector <T> & tree1, vector <T> & tree2)
+{
+   
 }
