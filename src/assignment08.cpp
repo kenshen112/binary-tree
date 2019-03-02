@@ -181,10 +181,15 @@ void testAdd()
       cout << "Was able to move the '6' and '7' nodes\n";
    
       // delete the left half of the tree
+      cout << "this is checkpoint one\n";
       BNode <int> * pTemp = pTree->pLeft;
+      cout << "this is point two\n";
       addLeft(pTree, (BNode <int> *)NULL);
+      cout << "this is point three\n";
       assert(pTree->pLeft == NULL);
+      cout << "point four\n";
       deleteBTree(pTemp);
+      cout << "revenge of the fifth\n";
       cout << "Size after deleting half the nodes: "
            << sizeBTree(pTree) << endl;
    
