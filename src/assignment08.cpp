@@ -249,7 +249,7 @@ void testDisplay()
       addRight(pTree->pRight, new BNode <string> (word));
 
       // display the results
-      cout << "Completed tree: { " << pTree << "}\n";
+      cout << "Completed tree: { " << *pTree << "}\n";
 
       // delete the tree
       deleteBTree(pTree);
