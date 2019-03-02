@@ -33,7 +33,7 @@ public:
       pRight = nullptr;
    }
       
-   BNode operator>>(const BNode <T> display);          
+   BNode operator << (const BNode <T> *display);          
 };
 
 /******************************************
@@ -96,7 +96,7 @@ void displayLVR(const BNode <T> * pHead)
    }
    
    displayLVR(pHead->pLeft);      // L    
-   std::cout << *pHead->data;      // V    
+   std::cout << pHead->data;      // V    
    displayLVR(pHead->pRight);     // R 
 }
 
@@ -104,7 +104,7 @@ void displayLVR(const BNode <T> * pHead)
 * INPUT OPERATOR
 *******************/
 template<class T>
-BNode<T> BNode<T>::operator>>(const BNode<T> display)
+BNode <T> BNode <T> ::operator << (const BNode<T> *display)
 {
    displayLVR(display);
 }
