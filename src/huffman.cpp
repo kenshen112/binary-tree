@@ -35,8 +35,8 @@ void readFile(const string & filename, vector <T> & tree1);
 void huffman(const string & fileName)
 {
    //two vectors, of BNodes holding pairs
-   vector <BNode <pair <string, float> *> huff_tree;
-   vector <BNode <pair <string, float> *> hold_order;
+   vector <BNode *> huff_tree;
+   vector <BNode *> hold_order;
 
    //read the file
    readFile(fileName, huff_tree);
