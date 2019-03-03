@@ -51,17 +51,15 @@ void readFile(const string & filename, vector <T> & tree1)
    //why are we passing both trees to readFile?
    //shouldn't the file only contain one tree??
    pair <string, float> data1;
-   pair <string, float> data2;
    
    ifstream fin (filename);
    while(!fin.eof())
    {
       fin >> data1; //not sure
-      data2 = data1;
       tree1.push_back(data1); //not sure
-      tree2.push_back(data2);
    }
 
    fin.close();
    return;
+}
 }
