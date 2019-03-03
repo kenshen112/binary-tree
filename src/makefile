@@ -1,14 +1,23 @@
 ###############################################################
 # Program:
 #     Assignment 08, Binary Tree
-#     Brother XXXXX, CS235
+#     Brother Kirby, CS235
 # Author:
-#     <your name here>
+#     Ken Smith
+#     Jessica Smith
+#     Tim O'Barr
 # Summary:
-#     <put a description here>
-#     HUFFMAN HAS BEEN REMOVED, DO NOT FORGET TO PUT IT BACK
+#     Implements a binary node, and uses it to makea huffman code
 # Time:
-#     <how long did it take to complete this program>?
+#     Group: 11 hours
+#     Solo:
+#        Ken: 6 hours
+#        Jessica: 4 hours
+#        Tim: 5 hours
+# Difficulties:
+#     Ken: Stuck on the insertion operator for 6 hours
+#     Jessica: understanding huffman codes
+#     Tim: Stuck on the insertion operator for 6 hours
 ###############################################################
 
 ##############################################################
