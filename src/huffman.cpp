@@ -46,5 +46,16 @@ void huffman(const string & fileName)
 
 void readFile(const string & filename, vector <T> & tree1, vector <T> & tree2)
 {
-   
+   //why are we passing both trees to readFile?
+   //shouldn't the file only contain one tree??
+   float data; //not sure what data type to use??
+   ifstream fin (filename);
+   while(!fin.eof())
+   {
+      fin >> data; //not sure
+      tree1.push_back(data); //not sure
+   }
+
+   fin.close();
+   return;
 }
