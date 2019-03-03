@@ -25,7 +25,8 @@ using std::string;
 using std::bad_alloc;
 using namespace custom;
 
-void readFile(const string & filename, vector <T> & tree1, vector <T> & tree2);
+template <class T>
+void readFile(const string & filename, vector <T> & tree1);
 
 /*******************************************
  * HUFFMAN
