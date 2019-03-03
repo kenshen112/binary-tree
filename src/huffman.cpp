@@ -44,7 +44,7 @@ void huffman(const string & fileName)
    return;
 }
 
-Template <T>
+template <class T>
 void readFile(const string & filename, vector <T> & tree1)
 {
    //why are we passing both trees to readFile?
