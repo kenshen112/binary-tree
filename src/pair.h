@@ -66,7 +66,7 @@ template <class T1, class T2>
 inline std::ostream & operator << (std::ostream & out,
                                    const pair <T1, T2> & rhs)
 {
-   out << '(' << rhs.first << ", " << rhs.second << ')';
+   out << '(' << rhs.second << ", " << rhs.first << ')';
    return out;
 }
 
@@ -78,7 +78,7 @@ template <class T1, class T2>
 inline std::istream & operator >> (std::istream & in,
                                    pair <T1, T2> & rhs)
 {
-   in >> rhs.first >> rhs.second;
+   in >> rhs.second >> rhs.first;
    return in;
 }
 
