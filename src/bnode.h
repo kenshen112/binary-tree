@@ -74,9 +74,8 @@ BNode <T> * copyBTree(const BNode<T> *source)
  * deletes each node of the binary tree
 ********************************************/
 template <class T>
-void deleteBTree(BNode<T> *bnode)
+void deleteBTree(BNode <T> *&bnode)
 {
-   std::cerr << "how recursive are we?\n";
    if(bnode == nullptr)
    {
       return;
@@ -85,8 +84,13 @@ void deleteBTree(BNode<T> *bnode)
    deleteBTree(bnode->pLeft); 
    deleteBTree(bnode->pRight);
 
-   bnode = nullptr;
    delete bnode;
+
+   bnode = nullptr;
+   if(bnode == NULL)
+   {
+      std::cerr << "its null now\n";
+   }
 }
 
 

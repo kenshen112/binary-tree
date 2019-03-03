@@ -304,6 +304,10 @@ void testMerge()
       
       // delete the tree
       deleteBTree(pMiddle);
+      if(pMiddle == NULL)
+      {
+         cerr << "it really is Null\n";
+      }
       assert(pMiddle == NULL);
 
       // display the copied tree
