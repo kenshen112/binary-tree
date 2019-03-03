@@ -35,8 +35,13 @@ void readFile(const string & filename, vector <T> & tree1);
 void huffman(const string & fileName)
 {
    //two vectors, of BNodes holding pairs
+<<<<<<< HEAD
    vector <BNode *> huff_tree;
    vector <BNode *> hold_order;
+=======
+   vector <pair<string, float>> huff_tree;
+   vector <pair<string, float>> hold_order;
+>>>>>>> a3ec943889dc2868da97b34d05702fd9e61d5dcc
 
    //read the file
    readFile(fileName, huff_tree);
@@ -48,8 +53,6 @@ void huffman(const string & fileName)
 template <class T>
 void readFile(const string & filename, vector <T> & tree1)
 {
-   //why are we passing both trees to readFile?
-   //shouldn't the file only contain one tree??
    pair <string, float> data1;
    
    ifstream fin (filename);
